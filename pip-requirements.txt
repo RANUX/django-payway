@@ -1,0 +1,19 @@
+django
+PIL
+-e git+https://github.com/nose-devs/nose.git#egg=nose
+django-nose
+django-extensions
+django-debug-toolbar
+MySQL-python
+-e git+https://github.com/pydevua/django-testrecorder#egg=django-testrecorder
+-e git+https://github.com/RANUX/simptools#egg=simptools
+-e git+https://github.com/RANUX/django-simptools#egg=django-simptools
+-e git+https://github.com/limist/py-moneyed.git#egg=py-moneyed
+-e git+https://github.com/bread-and-pepper/django-userena.git#egg=django-userena
+-e git+https://github.com/carljm/django-model-utils.git#egg=django-model-utils
+mock
+South
+tornado
+-e git+https://github.com/rancavil/tornado-webservices.git#egg=tornado-webservices
+suds
+supervisor
