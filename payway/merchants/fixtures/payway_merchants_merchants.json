@@ -1,0 +1,16 @@
+[
+    {
+        "pk":1,
+        "model":"merchants.merchant",
+        "fields":{
+            "uid":972855239,
+            "result_url_method":"GET",
+            "fail_url":"http://localhost:8000/merchants/fail",
+            "result_url":"http://localhost:8000/merchants/result",
+            "success_url":"http://localhost:8000/merchants/success",
+            "user":1,
+            "secret_key":"123456",
+            "name":"\u0422\u0435\u0441\u0442\u043e\u0432\u044b\u0439 \u043f\u0440\u043e\u0434\u0430\u0432\u0435\u0446"
+        }
+    }
+]

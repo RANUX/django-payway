@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-02-20 14:11+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: models.py:36
+msgid "user"
+msgstr "пользователь"
+
+#: models.py:37
+msgid "currency code"
+msgstr "код валюты"
+
+#: models.py:40 models.py:101 models.py:118
+msgid "account"
+msgstr "счет"
+
+#: models.py:41
+msgid "accounts"
+msgstr "счета"
+
+#: models.py:102 models.py:119 forms/add_money.py:23
+msgid "money amount"
+msgstr "сумма денег"
+
+#: models.py:106
+msgid "transaction"
+msgstr "транзакция"
+
+#: models.py:107
+msgid "transactions"
+msgstr "транзакции"
+
+#: models.py:120
+msgid "money amount without percent"
+msgstr "сумма денег без процентов"
+
+#: models.py:124 models.py:148
+msgid "invoice"
+msgstr "счет на пополнение"
+
+#: models.py:125
+msgid "invoices"
+msgstr "счета на пополнение"
+
+#: models.py:159
+msgid "success"
+msgstr "успех"
+
+#: models.py:159
+msgid "fail"
+msgstr "неудача"
+
+#: forms/add_money.py:31
+msgid "payment system"
+msgstr "платёжная система"
+
+#: templates/accounts/add_money.html:9 templates/accounts/list.html:23
+msgid "Add money"
+msgstr "Добавить деньги"
+
+#: templates/accounts/invoices_list.html:6 templates/accounts/list.html:11
+msgid "Number"
+msgstr "Номер"
+
+#: templates/accounts/invoices_list.html:7 templates/accounts/list.html:12
+#: templates/accounts/statement.html:7
+msgid "Money amount"
+msgstr "Cумма денег"
+
+#: templates/accounts/invoices_list.html:8
+msgid "Payments"
+msgstr "Платежи"
+
+#: templates/accounts/invoices_list.html:21
+msgid "Repeat"
+msgstr "Повторить"
+
+#: templates/accounts/list.html:4
+msgid "Add account"
+msgstr "Добавить счет"
+
+#: templates/accounts/list.html:10
+msgid "Currency"
+msgstr "Валюта"
+
+#: templates/accounts/list.html:13
+msgid "Operations"
+msgstr "Операции"
+
+#: templates/accounts/list.html:24
+msgid "Statement"
+msgstr "Выписка"
+
+#: templates/accounts/list.html:25
+msgid "Invoices for add money"
+msgstr "Счета на пополение"
+
+#: templates/accounts/statement.html:6
+msgid "Transaction"
+msgstr "Транзакции"
+
+#: templates/accounts/statement.html:8
+msgid "Enter date"
+msgstr "Дата зачисления"
+
+#: views/add_account.py:17
+msgid "Currency not allowed!"
+msgstr "Не допустимая валюта!"

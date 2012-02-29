@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="get" action="{% url orders_payment %}">
+    <input type="hidden" name="merchant_uid" value="972855239" />
+    <table>
+        <tr>
+            <td>Номер заказа:</td>
+            <td><input name="uid" value="1" /></td>
+        </tr>
+        <tr>
+            <td>Сумма к оплате:</td>
+            <td><input name="sum" value="10.12" /></td>
+        </tr>
+        <tr>
+            <td>Описание:</td>
+            <td><input name="description" value="Описание тестового товара" /></td>
+        </tr>
+        <tr>
+            <td>Номер счета:</td>
+            <td><input name="merchant_account" value="1111132330" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Оплатить" />
+</form>
+<div class="clear"></div>
+{% endblock %}

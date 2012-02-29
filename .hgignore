@@ -1,0 +1,13 @@
+syntax: regexp
+
+^.+\.db$
+^.+\.sqlite$
+^.+\.pyc$
+^.+\.log$
+^.+\$py\.class$
+^.+overrides.py$
+^.coverage$
+
+# ignore project dirs
+payway_pps/
+.idea/

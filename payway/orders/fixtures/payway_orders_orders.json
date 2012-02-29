@@ -1,0 +1,18 @@
+[
+    {
+        "pk":1,
+        "model":"orders.order",
+        "fields":{
+            "merchant":1,
+            "account":2,
+            "uid":1,
+            "created":"2012-02-01 05:36:06",
+            "sum_currency":"RUB",
+            "sum":"10.10",
+            "modified":"2012-02-01 05:36:07",
+            "user":1,
+            "is_paid":true,
+            "description":"\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435 \u0442\u0435\u0441\u0442\u043e\u0432\u043e\u0433\u043e \u0442\u043e\u0432\u0430\u0440\u0430"
+        }
+    }
+]

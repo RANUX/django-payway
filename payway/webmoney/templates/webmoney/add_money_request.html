@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST" action="https://merchant.webmoney.ru/lmi/payment.asp">
+    <table>
+    {{request_form.as_table}}
+    </table>
+    <input type="submit" value="submit" />
+</form>
+{% endblock %}

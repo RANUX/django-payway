@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="zebra-striped" summary="Invoices sheet">
+    <thead>
+    <tr>
+        <th>{% trans "Number" %}</th>
+        <th>{% trans "Money amount" %}</th>
+        <th>{% trans "Payments" %}</th>
+    </tr>
+    </thead>
+    {% for invoice in invoices_page.object_list %}
+    <tr>
+        <td>
+            {{ invoice.uid }}
+        </td>
+        <td>
+            {{ invoice.money_amount_without_percent }}
+        </td>
+        <td>
+            {% if not invoice.get_success_response_payments %}
+                <a href="{% url accounts_add_money invoice.account.uid invoice.uid %}">{% trans "Repeat" %}</a>
+            {% endif %}
+
+            {% for payment in invoice.accounts_responsepayment_related.all %}
+            {% with payment=payment.cast  %}
+                {% if payment.is_OK %}
+                <img src="{{ STATIC_URL }}img/accounts/accept.gif" alt="Accept">
+                {% else %}
+                <img src="{{ STATIC_URL }}img/accounts/stop.png" alt="Not accepted">
+                {% endif %}
+                №{{payment.id}} {{payment.payment_system}}
+            {% endwith %}
+            {% endfor %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+{% with objects_page=invoices_page %}
+    {% include "accounts/paginator.html" %}
+{% endwith %}
+{% endblock %}

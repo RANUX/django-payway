@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block content %}
+     <div class="well">
+         {% trans "Add account" %}:
+         <a href="{% url accounts_add_account 'RUB' %}">RUB</a>
+     </div>
+     <table class="zebra-striped" summary="Accounts list sheet">
+     <thead>
+         <tr>
+             <th>{% trans "Currency" %}</th>
+             <th>{% trans "Number" %}</th>
+             <th>{% trans "Money amount" %}</th>
+             <th>{% trans "Operations" %}</th>
+         </tr>
+     </thead>
+     {% for account in accounts_page.object_list %}
+        <tr>
+            <td>{{ account.currency_code }}</td>
+            <td>{{ account.uid }}</td>
+            <td>{{ account.get_balance.amount }}</td>
+            <td>
+                <ul>
+                    <li><a href="{% url accounts_add_money account.uid %}">{% trans "Add money" %}</a></li>
+                    <li><a href="{% url accounts_statement account.uid %}">{% trans "Statement" %}</a></li>
+                    <li><a href="{% url accounts_invoices account.uid %}">{% trans "Invoices for add money" %}</a></li>
+                </ul>
+            </td>
+        </tr>
+     {% endfor %}
+     </table>
+{% with objects_page=accounts_page %}
+{% include "accounts/paginator.html" %}
+{% endwith %}
+
+{% endblock %}

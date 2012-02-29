@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="zebra-striped" summary="Statement sheet">
+    <thead>
+    <tr>
+        <th>{% trans "Transaction" %}</th>
+        <th>{% trans "Money amount" %}</th>
+        <th>{% trans "Enter date" %}</th>
+    </tr>
+    </thead>
+    {% for transaction in transactions_page.object_list %}
+    <tr>
+        <td>{{ transaction.id }}</td>
+        <td>{{ transaction.money_amount }}</td>
+        <td>{{ transaction.created|date:"d-m-Y H:i:s" }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% with objects_page=transactions_page %}
+    {% include "accounts/paginator.html" %}
+{% endwith %}
+{% endblock %}

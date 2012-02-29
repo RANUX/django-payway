@@ -1,0 +1,151 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-01-31 12:34+0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2)\n"
+
+#: forms.py:16
+msgid "unique payment number"
+msgstr "уникальный номер платежа"
+
+#: forms.py:18
+msgid "10 digits phone number"
+msgstr "10 цифр номера телефона"
+
+#: forms.py:25
+msgid "sum with"
+msgstr "сумма с"
+
+#: forms.py:25
+msgid "percent"
+msgstr "процентами"
+
+#: forms.py:28
+msgid "description"
+msgstr "описание"
+
+#: forms.py:36
+msgid "from"
+msgstr "от"
+
+#: models.py:13
+msgid "0 Success"
+msgstr "0 Успех"
+
+#: models.py:14
+msgid "13 Server is busy, please repeat your request later"
+msgstr "13 Сервер занят, повторите запрос позже"
+
+#: models.py:15
+msgid "150 Authorization error (wrong login/password)  "
+msgstr "150 Ошибка авторизации (неверный логин/пароль)"
+
+#: models.py:16
+msgid "210 Bill not found"
+msgstr "210 Счёт не найден"
+
+#: models.py:17
+msgid "215 Bill with this txn-id already exists"
+msgstr "215 Счет с таким txn-id уже существует"
+
+#: models.py:18
+msgid "241 Very small bill sum"
+msgstr "241 Очень маленькая сумма"
+
+#: models.py:19
+msgid "242 Bill maximum sum exceeded"
+msgstr "242 Превышение максимального интервала получения списка счетов"
+
+#: models.py:20
+msgid "278 Bill list maximum time range exceeded"
+msgstr "278 Превышение максимального интервала получения списка счетов"
+
+#: models.py:21
+msgid "298 No such agent in the system"
+msgstr "298 Агента не существует в системе"
+
+#: models.py:22
+msgid "300 Unknown error"
+msgstr "300 Неизвестная ошибка"
+
+#: models.py:23
+msgid "330 Encryption error"
+msgstr "330 Ошибка шифрования"
+
+#: models.py:24
+msgid "370 Maximum allowed concurrent requests overlimit"
+msgstr "370 Превышено максимальное кол-во одновременно выполняемых запросов"
+
+#: models.py:31
+msgid "50 Made"
+msgstr "50 Выставлен"
+
+#: models.py:32
+msgid "52 Processing"
+msgstr "52 Проводится"
+
+#: models.py:33
+msgid "60 Paid"
+msgstr "60 Оплачен"
+
+#: models.py:34
+msgid "150 Cancelled (Terminal error)"
+msgstr "150 Отменен (ошибка на терминале)"
+
+#: models.py:35
+msgid ""
+"151 Cancelled (authorization error, declined, not enough money on account or "
+"something else)"
+msgstr ""
+"151 Отменен (ошибка авторизации: недостаточно средств на балансе, отклонен "
+"абонентом при оплате с лицевого счета оператора сотовой связи и т.п.)."
+
+#: models.py:36
+msgid "160 Cancelled"
+msgstr "160 Отменен"
+
+#: models.py:37
+msgid "161 Cancelled (Timeout)"
+msgstr "161 Отменен (Истекло время)"
+
+#: models.py:39
+msgid "Qiwi Wallet"
+msgstr "Киви кошелёк"
+
+#: models.py:40
+msgid "Status"
+msgstr "Статус"
+
+#: models.py:41
+msgid "User phone number"
+msgstr "Номер телефона"
+
+#: models.py:42
+msgid "Billing date"
+msgstr "Дата оплаты"
+
+#: models.py:43
+msgid "Bill lifetime"
+msgstr "Дата выставления счёта"
+
+#: models.py:46
+msgid "bill"
+msgstr "счет"
+
+#: models.py:47
+msgid "bills"
+msgstr "счета"

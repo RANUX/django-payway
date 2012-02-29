@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<table class="zebra-striped" summary="Orders sheet">
+    <thead>
+    <tr>
+        <th>{% trans "Number" %}</th>
+        <th>{% trans "Sum" %}</th>
+        <th>{% trans "Account" %}</th>
+        <th>{% trans "Description" %}</th>
+        <th>{% trans "Is paid" %}</th>
+        <th>{% trans "Created" %}</th>
+    </tr>
+    </thead>
+    {% for order in orders_page.object_list %}
+    <tr>
+        <td>{{ order.uid }}</td>
+        <td>{{ order.sum }}</td>
+        <td>{{ order.account }}</td>
+        <td>{{ order.description }}</td>
+        <td>{% if order.is_paid %}
+                <img src="{{ STATIC_URL }}img/orders/accept.gif" alt="Order is paid">
+            {% else %}
+                <img src="{{ STATIC_URL }}img/orders/stop.png" alt="Order is paid">
+            {% endif %}
+        </td>
+        <td>{{ order.created|date:"d-m-Y H:i:s" }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% with objects_page=orders_page %}
+    {% include "orders/paginator.html" %}
+{% endwith %}
+{% endblock %}

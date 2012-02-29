@@ -1,0 +1,4 @@
+{% load i18n %}
+{% blocktrans %}
+{{user}} payment for {{invoice_uid}} invoice
+{% endblocktrans %}
