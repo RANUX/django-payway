@@ -9,9 +9,9 @@ Integration with your site
 Please, contact with me by email admin@httpbots.com
 
 
-Documentation
+Example
 =========================================================
-In progress ...
+See payway_demo
 
 
 Requirements

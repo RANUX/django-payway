@@ -26,6 +26,7 @@ TERMINATION_CODES = Choices(
 
 class Bill(ResponsePayment):
 
+
     STATUS = Choices(
         (50, 'MADE', _('50 Made')),
         (52, 'PROCESSING', _('52 Processing')),
@@ -44,4 +45,5 @@ class Bill(ResponsePayment):
     class Meta:
         verbose_name = _('bill')
         verbose_name_plural = _('bills')
+        db_table = 'payway_qiwi_bill'
 

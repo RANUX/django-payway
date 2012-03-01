@@ -17,11 +17,18 @@ class Purse(models.Model):
     is_active = models.BooleanField(_('is active'), default=False)
     currency = models.CharField(_('currency'), max_length=3, choices=CURRENCY_CHOICES)
 
+    class Meta:
+        db_table = 'payway_webmoney_purses'
+
     def __unicode__(self):
         return '%s' % self.purse
 
 
 class ResultResponsePayment(ResponsePayment):
+
+    class Meta:
+        db_table = 'payway_webmoney_resultresponsepayment'
+
     payment_system = _('Webmoney')
 
     PAYMENT_MODE = Choices((0, _('real')), (1, _('test')))
