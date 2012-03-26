@@ -13,7 +13,7 @@ PROJECT_DIR, PROJECT_MODULE_NAME = os.path.split(
 sys.path.append(PROJECT_DIR)
 
 try:
-    from payway_pps.conf.dev import settings
+    from payway_demo import settings
 except ImportError:
     import sys
     sys.stderr.write("Error: Can't find settings module in the directory containing %r. It appears you've customized things.\nYou'll have to run django-admin.py, passing it your settings module.\n(If the file settings.py does indeed exist, it's causing an ImportError somehow.)\n" % __file__)
