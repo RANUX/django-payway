@@ -6,8 +6,8 @@ __author__ = 'Razzhivin Alexander'
 __email__ = 'admin@httpbots.com'
 
 QIWI_MODULE_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-QIWI_LOGIN = getattr(settings, 'QIWI_LOGIN', '1111')        # default test login, override in your settings file
-QIWI_PASSWORD = getattr(settings, 'QIWI_PASSWORD', '1234')  # default test password, override in your settings file
+QIWI_LOGIN = getattr(settings, 'QIWI_LOGIN')
+QIWI_PASSWORD = getattr(settings, 'QIWI_PASSWORD')
 QIWI_SOAP_SERVER_PORT = getattr(settings, 'QIWI_SOAP_SERVER_PORT', 9090)
 QIWI_SOAP_SERVER_CONF = getattr(settings, 'QIWI_SOAP_SERVER_CONF', os.path.join(QIWI_MODULE_PATH, 'soap', 'qiwi_server.conf'))
 QIWI_CREATE  = getattr(settings, 'QIWI_CREATE', False)

@@ -3,8 +3,11 @@
 import sys
 from optparse import OptionParser
 from django.core.management import setup_environ
-
 from payway_demo import settings
+
+settings.QIWI_LOGIN = '1111'
+settings.QIWI_PASSWORD = '1234'
+
 setup_environ(settings)
 
 
