@@ -2,11 +2,13 @@
 import os
 import sys
 
+gettext_noop = lambda s: s
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('test', 'test@test.com'),
 )
 
 PROJECT_DIR, PROJECT_MODULE_NAME = os.path.split(
@@ -41,7 +43,14 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+LANGUAGES = (
+    ('ru', gettext_noop('Russian')),
+    ('en', gettext_noop('English')),
+)
+
 SITE_ID = 1
+
+EMAIL_BACKEND = 'django.core.mail.backends.locmem.EmailBackend'
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -117,8 +126,6 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_DIR, PROJECT_MODULE_NAME, 'templates'),
 )
 
-QIWI_LOGIN = ''
-QIWI_PASSWORD = ''
 
 from django import template
 template.add_to_builtins('django.templatetags.i18n')
@@ -132,6 +139,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.messages',
     'django.contrib.admin',
+    'django_nose',
     'payway.accounts',
     'payway.merchants',
     'payway.webmoney',
@@ -144,20 +152,74 @@ INSTALLED_APPS = (
 # the site admins on every HTTP 500 error.
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
+
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': False,
+    'disable_existing_loggers': True,
+    'root': {
+        'level': 'WARNING',
+        },
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        },
     'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
         'mail_admins': {
             'level': 'ERROR',
             'class': 'django.utils.log.AdminEmailHandler'
         }
     },
     'loggers': {
+        'django.db.backends': {
+            'level': 'ERROR',
+            'handlers': ['console',],
+            'propagate': False,
+            },
         'django.request': {
-            'handlers': ['mail_admins'],
+            'handlers': ['console',],
             'level': 'ERROR',
             'propagate': True,
         },
-    }
+        'payway.accounts': {
+            'handlers': ['console',],
+            'level': 'DEBUG',
+        },
+        'payway.orders': {
+            'handlers': ['console',],
+            'level': 'DEBUG',
+        },
+        'payway.qiwi': {
+            'handlers': ['console',],
+            'level': 'DEBUG',
+        },
+        'payway.webmoney': {
+            'handlers': ['console',],
+            'level': 'DEBUG',
+            },
+        'payway.merchants': {
+            'handlers': ['console',],
+            'level': 'DEBUG',
+        },
+    },
 }
+
+#==============================================================================
+# TESTS
+#==============================================================================
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+NOSE_ARGS = ['--nocapture',
+             '--all-modules',
+             '--nologcapture',
+             '--verbosity=2',
+             '--with-coverage',
+             '--cover-package=payway',
+             #             '--cover-erase',
+             #             '--cover-tests',
+             #             '--cover-html',
+]

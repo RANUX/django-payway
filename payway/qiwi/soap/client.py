@@ -4,7 +4,7 @@ import logging
 from suds.xsd import sxbasic
 from suds.client import Client
 from payway.qiwi.conf.settings import QIWI_ALARM, QIWI_CREATE, QIWI_SOAP_CLIENT_URL, QIWI_BILL_LIFETIME, QIWI_DATETIME_FORMAT
-from conf.settings import QIWI_LOGIN, QIWI_PASSWORD, XML_SCHEMA_PATH
+from payway.qiwi.conf.settings import QIWI_LOGIN, QIWI_PASSWORD, XML_SCHEMA_PATH
 
 
 logger = logging.getLogger(__name__)

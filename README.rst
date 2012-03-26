@@ -8,15 +8,15 @@ Integration with your site
 =========================================================
 Please, contact with me by email admin@httpbots.com
 
+Requirements
+=========================================================
+See main requirements in pip-requirements.txt
+
 
 Example
 =========================================================
-See payway_demo
+See payway_demo and tests
 
-
-Requirements
-========================================================
-See pip-requirements.txt
 
 
 Demo

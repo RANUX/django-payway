@@ -22,7 +22,7 @@ except ImportError:
 setup_environ(settings)
 
 from payway.qiwi.models import Bill
-from conf.settings import QIWI_LOGIN, QIWI_PASSWORD
+from payway.qiwi.conf.settings import QIWI_LOGIN, QIWI_PASSWORD
 
 
 __author__ = 'Razzhivin Alexander'

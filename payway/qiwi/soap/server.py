@@ -10,7 +10,7 @@ from tornadows import soaphandler, webservices, complextypes
 from tornadows.soaphandler import webservice
 from payway.accounts.models import Invoice
 from payway.qiwi.models import TERMINATION_CODES, Bill
-from conf.settings import QIWI_LOGIN, QIWI_PASSWORD
+from payway.qiwi.conf.settings import QIWI_LOGIN, QIWI_PASSWORD
 from payway.qiwi.conf.settings import QIWI_SOAP_SERVER_PORT, QIWI_SOAP_SERVER_CONF
 
 

@@ -10,7 +10,7 @@ from payway.qiwi.conf.settings import QIWI_SOAP_SERVER_PORT, QIWI_BILL_LIFETIME
 from payway.qiwi.models import TERMINATION_CODES, Bill
 from payway.qiwi.soap.client import QiwiSoapClient
 from payway.qiwi.soap.server import UpdateBillService
-from conf.settings import QIWI_LOGIN
+from payway.qiwi.conf.settings import QIWI_LOGIN
 
 
 __author__ = 'Razzhivin Alexander'
@@ -89,7 +89,7 @@ class UpdateBillServiceTestCase(TestCase):
         result = self.update_bill(txn=1234, status=Bill.STATUS.PAYED)
         self.assertEquals(TERMINATION_CODES.UNKNOWN_ERROR, result)
 
-    def update_bill(self, login=QIWI_LOGIN, password='280160DD18B8362BC46DA2629D57F6A4', txn=None, status=Bill.STATUS.PAYED, amount=None):
+    def update_bill(self, login=QIWI_LOGIN, password='F29C5B73B3D6126A8AB7F6F42058E06C', txn=None, status=Bill.STATUS.PAYED, amount=None):
         service = UpdateBillService()
         check_bill_mock = Mock()
         BILLING_DATE='10.01.2012 13:00:00'
