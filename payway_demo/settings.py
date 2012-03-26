@@ -127,6 +127,9 @@ TEMPLATE_DIRS = (
 )
 
 
+QIWI_LOGIN = '1111'
+QIWI_PASSWORD = '3523'
+
 from django import template
 template.add_to_builtins('django.templatetags.i18n')
 

@@ -15,8 +15,8 @@ See main requirements in pip-requirements.txt
 
 Example
 =========================================================
-See payway_demo and tests
-
+Run payway_demo and go to http://127.0.0.1:8000/accounts/list/
+More examples you can find in tests
 
 
 Demo
